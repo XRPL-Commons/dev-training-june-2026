@@ -21,7 +21,8 @@
         "redhat.java",
         "vscjava.vscode-java-pack",
         "vscjava.vscode-maven",
-        "formulahendry.code-runner"
+        "formulahendry.code-runner",
+        "ms-vsliveshare.vsliveshare"
       ],
       "settings": {
         "editor.formatOnSave": true,
