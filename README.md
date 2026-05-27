@@ -1,6 +1,6 @@
 # XRPL Academy - Hands-On Blockchain Development Workshop
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/xrpl-commons/xrpl-academy)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/XRPL-Commons/test-academy-online-training)
 
 A two-day hands-on workshop that teaches you to build on the XRP Ledger (XRPL) from scratch.
 No prior blockchain experience required. Supports JavaScript, Python, and Java.
