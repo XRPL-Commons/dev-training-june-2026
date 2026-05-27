@@ -1,0 +1,29 @@
+# JavaScript
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+.idea/
+*.iml
+
+# Generated files
+wallets.json
+
+# Environment
+*.env
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db

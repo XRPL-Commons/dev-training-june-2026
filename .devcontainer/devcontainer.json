@@ -1,0 +1,42 @@
+{
+  "name": "XRPL Academy",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": "true"
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.pylance",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "formulahendry.code-runner"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.fontSize": 14,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "code-runner.runInTerminal": true,
+        "java.configuration.updateBuildConfiguration": "automatic"
+      }
+    }
+  },
+
+  "forwardPorts": [3000, 5000, 8080],
+
+  "remoteEnv": {
+    "XRPL_NETWORK": "wss://s.altnet.rippletest.net:51233",
+    "XRPL_FAUCET": "https://faucet.altnet.rippletest.net/accounts"
+  }
+}
