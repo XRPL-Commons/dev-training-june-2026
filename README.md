@@ -33,6 +33,11 @@ The Codespace automatically:
 - saves them to `wallets.json`
 - silently notifies mentors in Google Chat that you started
 
+Prebuild note:
+
+- this repository is configured so dependency installation runs during Codespaces prebuild creation
+- wallet minting still runs only when each participant's Codespace starts, so wallets stay unique per participant
+
 ### 2. Pick a Language
 
 | Language | Folder | Run pattern |
@@ -166,6 +171,8 @@ Setup steps:
 3. Use the webhook URL value from Google Chat.
 4. New participant Codespaces will automatically post a startup event when wallets are minted.
 5. Exercise success events and the final deliverable will also post automatically in the background.
+6. In GitHub repository settings, open `Settings -> Codespaces -> Prebuild configuration` and create a prebuild for `main`.
+7. Choose the nearest region for participants, for example `West Europe` for this workshop.
 
 Participants do not need to know or paste the webhook URL.
 
