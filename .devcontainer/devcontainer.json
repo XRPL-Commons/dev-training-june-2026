@@ -10,6 +10,7 @@
   },
 
   "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "node scripts/mint-wallets.js",
 
   "customizations": {
     "vscode": {
