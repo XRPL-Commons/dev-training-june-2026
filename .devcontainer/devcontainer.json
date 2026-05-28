@@ -10,7 +10,7 @@
   },
 
   "postCreateCommand": "bash .devcontainer/setup.sh",
-  "postStartCommand": "node scripts/mint-wallets.js",
+  "postStartCommand": "node scripts/mint-wallets.js && $HOME/.local/bin/xrpl-start-progress-watcher \"$PWD\"",
 
   "customizations": {
     "vscode": {

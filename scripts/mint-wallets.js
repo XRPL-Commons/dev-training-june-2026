@@ -20,8 +20,9 @@
  * Run: node scripts/mint-wallets.js
  */
 
-const xrpl = require("xrpl");
 const fs = require("fs");
+const path = require("path");
+const xrpl = require(path.join(__dirname, "..", "exercises", "js", "node_modules", "xrpl"));
 
 const TESTNET_URL = "wss://s.altnet.rippletest.net:51233";
 
