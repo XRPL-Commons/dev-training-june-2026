@@ -1,260 +1,285 @@
-# XRPL Academy - Hands-On Blockchain Development Workshop
+# 🚀 XRPL Developer Training — June 8-9, 2026
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/XRPL-Commons/test-academy-online-training)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/XRPL-Commons/dev-training-june-2026)
 
-A two-day hands-on workshop that teaches you to build on the XRP Ledger (XRPL) from scratch.
-No prior blockchain experience required. Supports JavaScript, Python, and Java.
-
----
-
-## What is the XRP Ledger?
-
-The XRP Ledger (XRPL) is a decentralized, open-source blockchain designed for fast and
-low-cost financial transactions. Unlike blockchains that use mining (Proof of Work), XRPL
-uses a unique consensus protocol where trusted validators agree on the order of transactions
-every 3-5 seconds.
-
-Key characteristics:
-- Transactions settle in 3-5 seconds (compared to minutes or hours on other chains)
-- Transaction cost is approximately 0.00001 XRP (fractions of a cent)
-- Built-in decentralized exchange (DEX) for trading any issued token
-- Native support for tokens (IOUs), NFTs, and automated market makers (AMMs)
-- No smart contract language needed -- features are built into the protocol itself
+Welcome to the XRPL Commons hands-on developer training! In two days, you'll go from zero to building a complete DeFi stack on the XRP Ledger.
 
 ---
 
-## What is Testnet?
+## 🏁 Getting Started (5 minutes)
 
-XRPL Testnet is a separate network that mirrors the real (Mainnet) ledger but uses
-worthless test XRP. It exists so developers can experiment freely without risking real money.
+### Step 1: Open your coding environment
 
-- Test XRP is free and unlimited via the Testnet Faucet
-- The Testnet resets periodically, so do not store anything permanent there
-- All exercises in this workshop use Testnet exclusively
+Click the **"Open in GitHub Codespaces"** button above. This gives you a fully configured coding environment in your browser — no installation needed.
+
+> You need a free [GitHub account](https://github.com/signup). That's it.
+
+### Step 2: Wait for setup to complete
+
+The environment automatically:
+- ✅ Installs all dependencies (JS, Python, Java)
+- ✅ Creates two funded wallets on XRPL Testnet
+- ✅ Saves your wallets to `wallets.json`
+
+You'll see "Setup complete" in the terminal when it's ready (~60 seconds).
+
+### Step 3: Choose your language
+
+Navigate to your preferred language folder:
+
+| Language | Folder | Run command |
+|----------|--------|-------------|
+| JavaScript | `exercises/js/` | `node filename.js` |
+| Python | `exercises/python/` | `python filename.py` |
+| Java | `exercises/java/` | `mvn compile exec:java -Dexec.mainClass="academy.xrpl.ClassName"` |
+
+### Step 4: Start coding!
+
+Each exercise file has **TODO blocks** — fill them in, run the file, and check the Explorer link to see your transaction on-chain.
 
 ---
 
-## Quick Start
+## 📅 Workshop Schedule
 
-1. Click the "Open in GitHub Codespaces" badge above (requires a free GitHub account)
-2. Wait approximately 60 seconds for the environment to set up
-3. The setup script automatically creates two funded Testnet wallets saved to `wallets.json`
-4. Choose your language and start with Day 1
+### Day 1 — Sunday, June 8
 
-If you prefer to run locally, see the "Local Setup" section below.
+| Time (CET) | Activity | Exercise |
+|-------------|----------|----------|
+| 3:00 - 3:30 | Welcome Keynote | — |
+| 3:30 - 4:30 | Blockchain 101 + Quiz | — |
+| 4:45 - 5:30 | XRPL 101 + Quiz | — |
+| 5:30 - 6:00 | **Coding Session 1** | `day1-send-xrp` |
+| 6:00 - 6:30 | Q&A + Homework assigned | `homework-nft` |
+
+### Day 2 — Monday, June 9
+
+| Time (CET) | Activity | Exercise |
+|-------------|----------|----------|
+| 3:00 - 3:30 | Homework Review | — |
+| 3:30 - 4:00 | Keynote: Liquidity on XRPL | — |
+| 4:05 - 5:35 | **Coding Session 2** | `day2-step1` → `step2` → `step3` |
+| 5:50 - 6:10 | Alumni Testimonial | — |
+| 6:10 - 6:30 | Q&A + Closing | — |
 
 ---
 
-## Workshop Structure
+## 📝 Exercise Guide
 
-### Day 1 - Fundamentals: Wallets, Connections, and Transactions
+### How exercises work
 
-You will learn:
-- How XRPL accounts (wallets) work -- addresses, seeds, and key pairs
-- How to connect to the XRPL network via WebSocket
-- How to construct, sign, and submit a payment transaction
-- How to verify transactions on the Testnet Explorer
+Every file has clearly marked TODO sections with hints:
 
-Run the Day 1 exercise:
+```js
+// ╔══════════════════════════════════════════════════════════════════╗
+// ║ TODO 1: Construct the Payment transaction                       ║
+// ║                                                                  ║
+// ║ HINT: { TransactionType: 'Payment', Account: ..., Amount: ... } ║
+// ╚══════════════════════════════════════════════════════════════════╝
+const paymentTx = {
+  // YOUR CODE HERE
+};
+```
+
+Fill in the code, run the file, and verify on the [Testnet Explorer](https://testnet.xrpl.org).
+
+---
+
+### Exercise 1: Send XRP (Day 1 — Live)
+
+**File:** `day1-send-xrp`  
+**Time:** 10 minutes  
+**What you'll do:** Send 10 XRP from one wallet to another  
+**What you'll learn:** How transactions work on XRPL  
 
 ```bash
 # JavaScript
-cd js && node day1-first-transaction.js
+cd exercises/js && node day1-send-xrp.js
 
 # Python
-cd python && python day1-first-transaction.py
+cd exercises/python && python day1_send_xrp.py
 
 # Java
-cd java && mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day1FirstTransaction"
+cd exercises/java && mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day1SendXrp"
 ```
 
-### Day 2 - Tokens and NFTs: Issuing Digital Assets
+✅ **Success:** You see `tesSUCCESS` and an Explorer link showing your transaction.
 
-You will learn:
-- How tokens (IOUs) work on XRPL -- issuers, trust lines, and balances
-- How to configure an account to issue tokens
-- How to create a trust line (permission to hold a token)
-- How to issue and transfer custom tokens
-- How to mint NFTs (non-fungible tokens) with royalties
+---
 
-Run the Day 2 exercise:
+### Exercise 2: NFT Lifecycle (Homework)
+
+**File:** `homework-nft`  
+**Time:** 20-30 minutes (on your own)  
+**What you'll do:** Mint an NFT → Query it → Burn it → Verify it's gone  
+**What you'll learn:** Digital asset creation and destruction on-chain  
 
 ```bash
 # JavaScript
-cd js && node day2-tokens-nft.js
+cd exercises/js && node homework-nft.js
 
 # Python
-cd python && python day2-tokens-nft.py
+cd exercises/python && python homework_nft.py
 
 # Java
-cd java && mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day2TokensNft"
+cd exercises/java && mvn compile exec:java -Dexec.mainClass="academy.xrpl.HomeworkNft"
 ```
 
----
+💡 **Personalize it:** Replace `YOUR_NAME_HERE` in the URI with your actual name!
 
-## Your Testnet Wallets
-
-After the environment sets up, open `wallets.json` in the project root. It contains
-two pre-funded wallets with approximately 100 XRP each (Testnet only, no real value).
-
-Each wallet has:
-- `address` -- your public account identifier on the ledger (starts with "r")
-- `seed` -- your secret key used to sign transactions (starts with "s")
-- `publicKey` -- the cryptographic public key derived from your seed
-- `balance` -- current XRP balance on Testnet
-
-IMPORTANT: Seeds are secret keys. Anyone with your seed can control your account.
-On Testnet this does not matter (the XRP is worthless), but on Mainnet you must
-never share your seed.
-
-To generate fresh wallets at any time:
-```bash
-node scripts/mint-wallets.js
-```
+✅ **Success:** You see your NFT appear on the Explorer, then disappear after burning.
 
 ---
 
-## Key XRPL Concepts
+### Exercise 3: Setup Account (Day 2 — Step 1)
 
-### Accounts and Wallets
-
-An XRPL account is identified by its address (e.g., rN7n3473SaZBCG4dFL83w7p1W9cgZw6). To
-create an account on the ledger, it must receive a minimum reserve of 10 XRP. On Testnet,
-the faucet handles this automatically.
-
-### Transactions
-
-Every action on XRPL is a transaction: sending payments, creating trust lines, minting NFTs,
-etc. Each transaction must be:
-1. Constructed with the correct fields
-2. Signed with the sender's secret key
-3. Submitted to the network
-4. Validated by consensus (3-5 seconds)
-
-### Drops
-
-XRP amounts in transactions are specified in "drops" -- the smallest unit of XRP.
-1 XRP = 1,000,000 drops. Libraries provide helper functions to convert between XRP and drops.
-
-### Trust Lines
-
-Unlike XRP (the native currency), custom tokens require explicit permission to hold.
-A trust line is a declaration that says "I trust this issuer to hold up to X amount of
-their token." This prevents spam -- no one can force tokens into your account.
-
-### NFTs on XRPL
-
-XRPL has native NFT support (no smart contracts needed). NFTs are minted with NFTokenMint
-transactions and can include:
-- A URI pointing to metadata/media
-- A transfer fee (royalty) paid to the creator on every resale
-- Flags controlling whether the NFT can be transferred or burned
-
----
-
-## Network Information
-
-| Setting    | Value                                          |
-|------------|------------------------------------------------|
-| Network    | Testnet                                        |
-| WebSocket  | `wss://s.altnet.rippletest.net:51233`          |
-| Faucet     | https://faucet.altnet.rippletest.net/accounts  |
-| Explorer   | https://testnet.xrpl.org                       |
-
----
-
-## Languages and Libraries
-
-| Language   | Library   | Documentation                          |
-|------------|-----------|----------------------------------------|
-| JavaScript | xrpl.js   | https://js.xrpl.org                    |
-| Python     | xrpl-py   | https://xrpl-py.readthedocs.io         |
-| Java       | xrpl4j    | https://github.com/XRPLF/xrpl4j       |
-
----
-
-## Project Structure
-
-```
-xrpl-academy/
-├── .devcontainer/
-│   ├── devcontainer.json    -- Codespaces configuration
-│   └── setup.sh             -- Automated environment setup
-├── scripts/
-│   └── mint-wallets.js      -- Generates funded Testnet wallets
-├── js/
-│   ├── package.json         -- Node.js dependencies
-│   ├── day1-first-transaction.js
-│   └── day2-tokens-nft.js
-├── python/
-│   ├── requirements.txt     -- Python dependencies
-│   ├── day1-first-transaction.py
-│   └── day2-tokens-nft.py
-├── java/
-│   ├── pom.xml              -- Maven dependencies (xrpl4j)
-│   └── src/main/java/academy/xrpl/
-│       ├── Day1FirstTransaction.java
-│       └── Day2TokensNft.java
-├── wallets.json             -- Auto-generated Testnet wallets (gitignored)
-└── README.md
-```
-
----
-
-## Local Setup (Without Codespaces)
-
-If you prefer to run locally instead of using Codespaces:
-
-### Prerequisites
-- Node.js 18+ (for JavaScript exercises and wallet minting)
-- Python 3.9+ (for Python exercises)
-- Java 17+ and Maven 3.8+ (for Java exercises)
-
-### Steps
+**File:** `day2-step1-setup-account`  
+**Time:** 5 minutes (warm-up)  
+**What you'll do:** Enable "Default Ripple" on your issuer account  
+**What you'll learn:** Account configuration for token issuance  
 
 ```bash
-# Clone the repository
-git clone https://github.com/xrpl-commons/xrpl-academy.git
-cd xrpl-academy
+# JavaScript
+cd exercises/js && node day2-step1-setup-account.js
 
-# Install JavaScript dependencies
-cd js && npm install && cd ..
+# Python
+cd exercises/python && python day2_step1_setup_account.py
 
-# Install Python dependencies
-pip install -r python/requirements.txt
-
-# Build Java project
-cd java && mvn compile && cd ..
-
-# Generate your Testnet wallets
-node scripts/mint-wallets.js
+# Java
+cd exercises/java && mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day2Step1SetupAccount"
 ```
 
 ---
 
-## Troubleshooting
+### Exercise 4: Issue a Token (Day 2 — Step 2)
 
-**Wallet minting fails:**
-The Testnet faucet occasionally has downtime. Wait a few minutes and try again with
-`node scripts/mint-wallets.js`. You can also manually get wallets at
-https://faucet.altnet.rippletest.net/accounts
+**File:** `day2-step2-issue-token`  
+**Time:** 15 minutes  
+**What you'll do:** Create a trust line + issue your own custom token  
+**What you'll learn:** How tokens (IOUs) work on XRPL  
 
-**Transaction fails with "tecUNFUNDED_PAYMENT":**
-Your wallet does not have enough XRP. Re-mint wallets to get fresh funded accounts.
+💡 **Personalize it:** Use your initials as the 3-letter currency code!
 
-**Cannot connect to WebSocket:**
-Check your internet connection. The Testnet WebSocket URL is
-`wss://s.altnet.rippletest.net:51233`. Some corporate firewalls block WebSocket connections.
+```bash
+# JavaScript
+cd exercises/js && node day2-step2-issue-token.js
 
-**Java build fails:**
-Ensure Maven is installed (`mvn --version`). The first build downloads dependencies
-and may take a few minutes.
+# Python
+cd exercises/python && python day2_step2_issue_token.py
+
+# Java
+cd exercises/java && mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day2Step2IssueToken"
+```
+
+✅ **Success:** Your custom token appears on the Explorer under the holder's account.
 
 ---
 
-## Further Reading
+### Exercise 5: Create an AMM Pool (Day 2 — Step 3)
 
-- XRPL Documentation: https://xrpl.org/docs
-- XRPL Developer Portal: https://xrpl.org/resources/dev-tools
-- Testnet Explorer: https://testnet.xrpl.org
-- XRP Ledger Standards (XLS): https://github.com/XRPLF/XRPL-Standards
+**File:** `day2-step3-create-amm`  
+**Time:** 20 minutes (capstone)  
+**What you'll do:** Create a liquidity pool pairing your token with XRP  
+**What you'll learn:** Automated Market Makers and DeFi on XRPL  
+
+⚠️ **Prerequisite:** You must complete Step 1 and Step 2 first!
+
+```bash
+# JavaScript
+cd exercises/js && node day2-step3-create-amm.js
+
+# Python
+cd exercises/python && python day2_step3_create_amm.py
+
+# Java
+cd exercises/java && mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day2Step3CreateAmm"
+```
+
+✅ **Success:** Your AMM pool is live on the XRPL Testnet. You just created a DEX market!
+
+---
+
+## 🔑 Your Wallets
+
+After setup, open `wallets.json` in the project root:
+
+```json
+{
+  "wallets": [
+    {
+      "address": "rABC123...",   ← Your public address (safe to share)
+      "seed": "sXYZ789...",      ← Your SECRET key (never share on Mainnet!)
+      "balance": "100 XRP"
+    },
+    { ... }
+  ]
+}
+```
+
+- **Wallet 1** = Sender / Issuer / Minter
+- **Wallet 2** = Receiver / Holder
+
+To regenerate wallets: `node scripts/mint-wallets.js`
+
+> ⚠️ These are **Testnet** wallets with fake XRP. Never reuse Testnet seeds on Mainnet.
+
+---
+
+## 🌐 Network Info
+
+| | |
+|---|---|
+| **Network** | XRPL Testnet |
+| **WebSocket** | `wss://s.altnet.rippletest.net:51233` |
+| **JSON-RPC** | `https://s.altnet.rippletest.net:51234` |
+| **Explorer** | https://testnet.xrpl.org |
+| **Faucet** | https://faucet.altnet.rippletest.net/accounts |
+
+---
+
+## 🆘 Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| Wallet minting fails | Testnet faucet may be down. Wait 2 min, retry: `node scripts/mint-wallets.js` |
+| `tecUNFUNDED_PAYMENT` | Not enough XRP. Re-mint wallets. |
+| Cannot connect to WebSocket | Check internet. Some corporate firewalls block WebSocket. |
+| Day 2 Step 3 fails | Run Step 1 and Step 2 first — AMM needs your token to exist. |
+| Java build fails | Run `mvn compile` first. Initial build downloads dependencies (~2 min). |
+
+**Still stuck?** Ask for help in the Zoom breakout room or post in Discord.
+
+---
+
+## 📚 Solutions
+
+If you're stuck, complete solutions are available on the **`solutions`** branch:
+
+```bash
+git checkout solutions -- solutions/
+```
+
+Or browse them on GitHub: [solutions branch](../../tree/solutions)
+
+---
+
+## 📖 Further Reading
+
+- [XRPL Documentation](https://xrpl.org/docs)
+- [xrpl.js docs](https://js.xrpl.org) · [xrpl-py docs](https://xrpl-py.readthedocs.io) · [xrpl4j](https://github.com/XRPLF/xrpl4j)
+- [Testnet Explorer](https://testnet.xrpl.org)
+- [XRPL Dev Tools](https://xrpl.org/resources/dev-tools)
+
+---
+
+## 🎓 What You'll Have Built
+
+By the end of this training:
+
+```
+✅ Sent XRP on a real blockchain
+✅ Minted and burned an NFT
+✅ Created your own custom token
+✅ Launched a liquidity pool (AMM)
+```
+
+**You've built a complete mini DeFi stack on XRPL. Welcome to Web3.** 🎉

@@ -1,0 +1,8 @@
+{
+  "name": "xrpl-academy-exercises",
+  "version": "1.0.0",
+  "description": "XRPL Academy Training Exercises - June 2026",
+  "dependencies": {
+    "xrpl": "^3.0.0"
+  }
+}
