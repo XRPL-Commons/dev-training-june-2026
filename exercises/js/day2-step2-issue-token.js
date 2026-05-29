@@ -2,6 +2,11 @@
 // Day 2 - Step 2 Exercise: Issue a Custom Token
 // Learn: How to create a trust line and issue tokens on XRPL.
 // The holder must trust the issuer before receiving tokens.
+// Reference materials:
+// - https://learn.xrpl-commons.org/course/code-with-the-xrpl/lesson/create-trustline-and-send-currency/
+// - https://xrpl.org/docs/references/protocol/transactions/types/trustset
+// - https://xrpl.org/docs/references/protocol/transactions/types/payment
+// - https://js.xrpl.org/
 // ============================================================
 
 const xrpl = require('xrpl');

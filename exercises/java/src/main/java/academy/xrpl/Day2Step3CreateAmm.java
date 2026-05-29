@@ -25,6 +25,12 @@ import java.io.File;
  * Day 2 Step 3: Create an AMM pool with XRP and an issued token.
  * (Must run Step1 and Step2 first)
  *
+ * Reference materials:
+ * - https://learn.xrpl-commons.org/course/deep-dive-into-xrpl-defi/lesson/what-is-an-automated-market-maker-amm/
+ * - https://xrpl.org/docs/references/protocol/transactions/types/ammcreate
+ * - https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/path-and-order-book-methods/amm_info
+ * - https://github.com/XRPLF/xrpl4j
+ *
  * Run: mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day2Step3CreateAmm"
  */
 public class Day2Step3CreateAmm {

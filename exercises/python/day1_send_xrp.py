@@ -2,6 +2,11 @@
 Day 1 Exercise: Send XRP
 ========================
 Send 10 XRP from wallet[0] to wallet[1] on XRPL Testnet.
+
+Reference materials:
+- https://learn.xrpl-commons.org/course/blockchain-foundations-for-web2-developers/lesson/create-accounts-and-send-xrp/
+- https://xrpl.org/docs/references/protocol/transactions/types/payment
+- https://xrpl-py.readthedocs.io/en/stable/
 """
 
 import json

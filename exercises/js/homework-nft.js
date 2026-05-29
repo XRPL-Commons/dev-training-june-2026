@@ -2,6 +2,12 @@
 // Homework Exercise: NFT Lifecycle
 // Learn: How to mint, query, and burn NFTs on the XRP Ledger.
 // You'll experience the full lifecycle of an NFToken.
+// Reference materials:
+// - https://learn.xrpl-commons.org/course/code-with-the-xrpl/lesson/mint-and-burn-nfts/
+// - https://xrpl.org/docs/references/protocol/transactions/types/nftokenmint
+// - https://xrpl.org/docs/references/protocol/transactions/types/nftokenburn
+// - https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/account-methods/account_nfts
+// - https://js.xrpl.org/
 // ============================================================
 
 const xrpl = require('xrpl');

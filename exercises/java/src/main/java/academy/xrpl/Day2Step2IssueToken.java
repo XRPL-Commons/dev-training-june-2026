@@ -24,6 +24,12 @@ import java.io.File;
  * Day 2 Step 2: Issue a custom token by sending it from issuer to holder.
  * (Must run Day2Step1SetupAccount first to create the trust line)
  *
+ * Reference materials:
+ * - https://learn.xrpl-commons.org/course/code-with-the-xrpl/lesson/create-trustline-and-send-currency/
+ * - https://xrpl.org/docs/references/protocol/transactions/types/trustset
+ * - https://xrpl.org/docs/references/protocol/transactions/types/payment
+ * - https://github.com/XRPLF/xrpl4j
+ *
  * Run: mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day2Step2IssueToken"
  */
 public class Day2Step2IssueToken {

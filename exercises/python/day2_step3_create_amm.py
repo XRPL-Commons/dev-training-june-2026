@@ -2,6 +2,12 @@
 Day 2 Step 3 Exercise: Create AMM
 ===================================
 Create an AMM pool with a custom token and XRP on XRPL Testnet.
+
+Reference materials:
+- https://learn.xrpl-commons.org/course/deep-dive-into-xrpl-defi/lesson/what-is-an-automated-market-maker-amm/
+- https://xrpl.org/docs/references/protocol/transactions/types/ammcreate
+- https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/path-and-order-book-methods/amm_info
+- https://xrpl-py.readthedocs.io/en/stable/
 """
 
 import json

@@ -22,6 +22,11 @@ import java.io.File;
 /**
  * Day 1 Exercise: Send XRP from one account to another.
  *
+ * Reference materials:
+ * - https://learn.xrpl-commons.org/course/blockchain-foundations-for-web2-developers/lesson/create-accounts-and-send-xrp/
+ * - https://xrpl.org/docs/references/protocol/transactions/types/payment
+ * - https://github.com/XRPLF/xrpl4j
+ *
  * Run: mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day1SendXrp"
  */
 public class Day1SendXrp {

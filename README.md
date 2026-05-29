@@ -214,6 +214,34 @@ Important:
 | Explorer | `https://testnet.xrpl.org` |
 | Faucet | `https://faucet.altnet.rippletest.net/accounts` |
 
+## Reference Materials
+
+### Start Here
+
+- [XRPL Commons Learning Portal](https://learn.xrpl-commons.org/) for guided courses and workshop-friendly explanations
+- [Intro to the XRPL](https://learn.xrpl-commons.org/course/intro-to-the-xrpl/) for the broad protocol overview
+- [XRPL Docs](https://xrpl.org/docs) for official transaction, API, and network references
+- [XRPLF GitHub Organization](https://github.com/XRPLF) for SDKs, examples, and core project source
+- [XRPL Testnet Explorer](https://testnet.xrpl.org) to confirm results on-chain after each exercise
+
+### Exercise-by-Exercise Links
+
+| Exercise | Learning Portal | XRPL Docs | Helpful SDK / Source |
+|---|---|---|---|
+| `day1-send-xrp` | [Create Accounts and Send XRP](https://learn.xrpl-commons.org/course/blockchain-foundations-for-web2-developers/lesson/create-accounts-and-send-xrp/) | [Payment transaction](https://xrpl.org/docs/references/protocol/transactions/types/payment) | [xrpl.js](https://js.xrpl.org), [xrpl-py](https://xrpl-py.readthedocs.io/en/stable/) |
+| `homework-nft` | [Mint and Burn NFTs](https://learn.xrpl-commons.org/course/code-with-the-xrpl/lesson/mint-and-burn-nfts/) | [NFTokenMint](https://xrpl.org/docs/references/protocol/transactions/types/nftokenmint), [NFTokenBurn](https://xrpl.org/docs/references/protocol/transactions/types/nftokenburn), [account_nfts](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/account-methods/account_nfts) | [xrpl.js](https://js.xrpl.org), [xrpl-py](https://xrpl-py.readthedocs.io/en/stable/) |
+| `day2-step1-setup-account` | [Code with XRPL and JavaScript](https://learn.xrpl-commons.org/course/code-with-the-xrpl/) | [AccountSet transaction](https://xrpl.org/docs/references/protocol/transactions/types/accountset) | [xrpl.js](https://js.xrpl.org), [xrpl-py](https://xrpl-py.readthedocs.io/en/stable/), [xrpl4j](https://github.com/XRPLF/xrpl4j) |
+| `day2-step2-issue-token` | [Create Trust Line and Send Currency](https://learn.xrpl-commons.org/course/code-with-the-xrpl/lesson/create-trustline-and-send-currency/) | [TrustSet transaction](https://xrpl.org/docs/references/protocol/transactions/types/trustset), [Payment transaction](https://xrpl.org/docs/references/protocol/transactions/types/payment) | [xrpl.js](https://js.xrpl.org), [xrpl-py](https://xrpl-py.readthedocs.io/en/stable/), [xrpl4j](https://github.com/XRPLF/xrpl4j) |
+| `day2-step3-create-amm` | [What is an Automated Market Maker?](https://learn.xrpl-commons.org/course/deep-dive-into-xrpl-defi/lesson/what-is-an-automated-market-maker-amm/) | [AMMCreate transaction](https://xrpl.org/docs/references/protocol/transactions/types/ammcreate), [amm_info](https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/path-and-order-book-methods/amm_info) | [xrpl.js](https://js.xrpl.org), [xrpl-py](https://xrpl-py.readthedocs.io/en/stable/), [xrpl4j](https://github.com/XRPLF/xrpl4j) |
+
+### SDKs and Repositories
+
+- [xrpl.js docs](https://js.xrpl.org) and [xrpl.js repo](https://github.com/XRPLF/xrpl.js)
+- [xrpl-py docs](https://xrpl-py.readthedocs.io/en/stable/) and [xrpl-py repo](https://github.com/XRPLF/xrpl-py)
+- [xrpl4j repo](https://github.com/XRPLF/xrpl4j) for Java examples and library source
+- [XRPL Dev Portal repo](https://github.com/XRPLF/xrpl-dev-portal) for many of the code samples behind the official docs
+- [rippled repo](https://github.com/XRPLF/rippled) for protocol/server implementation details if you want to go deeper
+
 ## Troubleshooting
 
 | Problem | What to do |
@@ -234,8 +262,11 @@ git checkout solutions -- solutions/
 
 ## Further Reading
 
+- [XRPL Commons Learning Portal](https://learn.xrpl-commons.org/)
 - [XRPL Docs](https://xrpl.org/docs)
 - [xrpl.js](https://js.xrpl.org)
-- [xrpl-py](https://xrpl-py.readthedocs.io)
+- [xrpl-py](https://xrpl-py.readthedocs.io/en/stable/)
 - [xrpl4j](https://github.com/XRPLF/xrpl4j)
+- [XRPLF GitHub Organization](https://github.com/XRPLF)
+- [XRPL Dev Portal Repo](https://github.com/XRPLF/xrpl-dev-portal)
 - [XRPL Testnet Explorer](https://testnet.xrpl.org)

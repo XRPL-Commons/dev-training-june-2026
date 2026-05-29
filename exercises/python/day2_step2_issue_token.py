@@ -2,6 +2,12 @@
 Day 2 Step 2 Exercise: Issue Token
 ====================================
 Create a TrustLine and issue a custom token on XRPL Testnet.
+
+Reference materials:
+- https://learn.xrpl-commons.org/course/code-with-the-xrpl/lesson/create-trustline-and-send-currency/
+- https://xrpl.org/docs/references/protocol/transactions/types/trustset
+- https://xrpl.org/docs/references/protocol/transactions/types/payment
+- https://xrpl-py.readthedocs.io/en/stable/
 """
 
 import json

@@ -2,6 +2,10 @@
 // Day 1 Exercise: Send XRP
 // Learn: How to construct and submit a Payment transaction
 // on the XRP Ledger testnet.
+// Reference materials:
+// - https://learn.xrpl-commons.org/course/blockchain-foundations-for-web2-developers/lesson/create-accounts-and-send-xrp/
+// - https://xrpl.org/docs/references/protocol/transactions/types/payment
+// - https://js.xrpl.org/
 // ============================================================
 
 const xrpl = require('xrpl');

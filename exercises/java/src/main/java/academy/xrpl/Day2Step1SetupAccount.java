@@ -23,6 +23,11 @@ import java.io.File;
 /**
  * Day 2 Step 1: Set up a trust line so wallet2 can hold tokens issued by wallet1.
  *
+ * Reference materials:
+ * - https://learn.xrpl-commons.org/course/code-with-the-xrpl/
+ * - https://xrpl.org/docs/references/protocol/transactions/types/accountset
+ * - https://github.com/XRPLF/xrpl4j
+ *
  * Run: mvn compile exec:java -Dexec.mainClass="academy.xrpl.Day2Step1SetupAccount"
  */
 public class Day2Step1SetupAccount {

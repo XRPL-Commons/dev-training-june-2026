@@ -9,6 +9,11 @@
 // AMM Concept: An AMM pool holds two assets and allows anyone
 // to swap between them. The TradingFee (in basis points) goes
 // to liquidity providers.
+// Reference materials:
+// - https://learn.xrpl-commons.org/course/deep-dive-into-xrpl-defi/lesson/what-is-an-automated-market-maker-amm/
+// - https://xrpl.org/docs/references/protocol/transactions/types/ammcreate
+// - https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/path-and-order-book-methods/amm_info
+// - https://js.xrpl.org/
 // ============================================================
 
 const xrpl = require('xrpl');

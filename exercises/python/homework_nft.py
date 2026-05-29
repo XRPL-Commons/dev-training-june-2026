@@ -2,6 +2,13 @@
 Homework Exercise: NFT Mint, Query, and Burn
 =============================================
 Mint an NFT, query it, then burn it on XRPL Testnet.
+
+Reference materials:
+- https://learn.xrpl-commons.org/course/code-with-the-xrpl/lesson/mint-and-burn-nfts/
+- https://xrpl.org/docs/references/protocol/transactions/types/nftokenmint
+- https://xrpl.org/docs/references/protocol/transactions/types/nftokenburn
+- https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/account-methods/account_nfts
+- https://xrpl-py.readthedocs.io/en/stable/
 """
 
 import json

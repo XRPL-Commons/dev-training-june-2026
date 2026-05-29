@@ -2,6 +2,11 @@
 Day 2 Step 1 Exercise: Setup Account
 =====================================
 Enable Default Ripple flag on the issuer account.
+
+Reference materials:
+- https://learn.xrpl-commons.org/course/code-with-the-xrpl/
+- https://xrpl.org/docs/references/protocol/transactions/types/accountset
+- https://xrpl-py.readthedocs.io/en/stable/
 """
 
 import json

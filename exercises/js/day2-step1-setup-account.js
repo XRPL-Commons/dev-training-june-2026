@@ -2,6 +2,10 @@
 // Day 2 - Step 1 Exercise: Setup Account (Enable Default Ripple)
 // Learn: How to configure account flags on the XRP Ledger.
 // Default Ripple is required before issuing tokens.
+// Reference materials:
+// - https://learn.xrpl-commons.org/course/code-with-the-xrpl/
+// - https://xrpl.org/docs/references/protocol/transactions/types/accountset
+// - https://js.xrpl.org/
 // ============================================================
 
 const xrpl = require('xrpl');
